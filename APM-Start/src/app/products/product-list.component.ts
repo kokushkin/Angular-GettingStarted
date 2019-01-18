@@ -52,7 +52,7 @@ export class ProductListComponent implements OnInit {
 
     perfomFilter(filterBy: string): IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
-        return this.products.filter((product: IProduct) =>
+        return this.products.filter(product =>
             product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
 
